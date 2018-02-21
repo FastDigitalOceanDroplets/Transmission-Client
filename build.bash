@@ -12,6 +12,18 @@ if [ "x$(id -u)" != 'x0' ]; then
     exit 1
 fi
 
+# Change time zone at your new server
+dpkg-reconfigure tzdata
+
+# Set the locale on your computer (is not the smartest way, I accept sugestions to do it interactivily)
+export LC_ALL=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LANGUAGE=en_US.UTF-8
+echo 'LC_ALL=en_US.UTF-8' >> /etc/environment
+echo 'LANG=en_US.UTF-8' >> /etc/environment
+echo 'LANGUAGE=en_US.UTF-8' >> /etc/environment
+dpkg-reconfigure locales
+
 apt -y update
 apt -y upgrade
 apt -y dist-upgrade
