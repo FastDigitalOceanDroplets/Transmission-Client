@@ -49,7 +49,7 @@
     "rpc-host-whitelist": "", 
     "rpc-host-whitelist-enabled": true, 
     "rpc-password": "perro", 
-    "rpc-port": 80, 
+    "rpc-port": 9090, 
     "rpc-url": "/", 
     "rpc-username": "transmission", 
     "rpc-whitelist": "127.0.0.1", 
